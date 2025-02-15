@@ -315,4 +315,90 @@
 }
 
 
+@media (max-width: 768px) {
+    /* 🔹 Уменьшаем размер аватарки и делаем её ближе к контенту */
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+
+    /* 🔹 Центрируем и корректируем положение кнопки "Download Resume" */
+    .resume-download-container {
+        position: relative;
+        top: 0;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 🔹 Делаем кнопку "Download Resume" компактнее */
+    .resume-button {
+        font-size: 10px;
+        padding: 5px 12px;
+        border-radius: 15px;
+    }
+
+    /* 🔹 Размещаем языковые опции сбоку */
+    .resume-options {
+        position: absolute;
+        top: 50%;
+        left: 105%; /* Смещаем вправо */
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.9);
+        padding: 1px 6px;
+        border-radius: 5px;
+        font-size: 9px; /* Делаем текст еще меньше */
+        white-space: nowrap;
+    }
+
+    /* 🔹 Уменьшаем кнопки выбора языка */
+    .resume-options button {
+        padding: 15px 15px;
+        font-size: 9px;
+    }
+
+
+    /* 🔹 Делаем иконки меньше и увеличиваем отступ между ними */
+    .contact-icons {
+        margin-top: 5px;
+        gap: 30px; /* Раздвигаем иконки */
+    }
+
+    .contact-icons a svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* 🔹 Выстраиваем контент в правильном порядке */
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 25px !important;
+    }
+
+    .hero-subtitle {
+        font-size: 22px !important;
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* Уменьшаем размер иконки внутри кнопки */
+    .resume-button svg {
+        width: 16px; /* Меняем размер */
+        height: 25px;
+    }
+}
+
+
 

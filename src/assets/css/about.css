@@ -57,3 +57,11 @@
 .about-content h2::after {
     width: 100px; /* Длина правой линии */
 }
+
+
+@media (max-width: 768px) {
+    .about-content {
+        max-width: 90%;
+        font-size: 16px;
+    }
+}
