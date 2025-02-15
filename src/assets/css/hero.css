@@ -1,0 +1,318 @@
+/* Секция приветствия */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-content h1 {
+    font-size: 40px; /* Измени на нужный размер */
+    font-weight: bold;
+    margin: 10px 0;
+    
+}
+
+.hero-content p {
+    font-size: 30px; /* Установи нужный размер */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+}
+
+
+
+/* Затемненный фон */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Легкое затемнение */
+    z-index: 0;
+}
+
+/* Фоновое видео */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Градиентное затемнение снизу */
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh; /* Увеличенная высота для более плавного перехода */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #111 100%);
+    pointer-events: none; /* Чтобы слой не мешал взаимодействию */
+}
+
+
+
+/* Контент */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Контейнер для аватарки */
+.profile-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Анимация увеличения при наведении */
+.profile-container:hover {
+    transform: scale(1.1);
+}
+
+/* Аватарка */
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 100px;
+}
+
+/* Контактные иконки */
+.contact-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    
+}
+
+.contact-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 100px;
+    text-decoration: none;
+}
+
+
+/* ✅ Основной размер иконок (глобус, телефон, email) */
+.contact-icons a svg {
+    width: 38px;  /* Измени размер иконок */
+    height: 38px; /* Сделай их квадратными */
+}
+
+/* ✅ Изменяем размер при наведении */
+.contact-icons a:hover svg {
+    transform: scale(1.3); /* Увеличение при наведении */
+}
+
+
+/* Контактные иконки */
+.contact-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    
+}
+
+/* Исправленный стиль для иконок */
+.contact-icons a {
+    display: flex; /* Гарантируем, что иконки не inline */
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Добавляем нужный стиль для SVG */
+.contact-icons a svg {
+    display: block; /* SVG теперь нормально воспринимает transform */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Наведение */
+.contact-icons a:hover svg {
+    transform: scale(1.3);
+    color: #ffcc00;
+}
+
+/* Базовые стили */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    opacity: 0;  /* Скрыто при загрузке */
+    transform: translateY(50px);  /* Смещено вниз */
+    animation: fadeInUp 1s ease-out forwards; /* Анимация появления */
+    animation-delay: 0.5s; /* Задержка перед началом */
+}
+
+/* Плавное появление фото (сразу) */
+.profile-pic {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInScale 0.8s ease-out forwards;
+    animation-delay: 0s; /* Без задержки */
+}
+
+/* Плавное появление текста (после фото) */
+.hero-title, .hero-subtitle {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.5s; /* Начинается после появления фото */
+}
+
+/* Плавное появление иконок (после текста) */
+.contact-icons a {
+    opacity: 0;
+    transform: scale(0.5);
+    animation: fadeInScale 0.6s ease-out forwards;
+    animation-delay: 1s; /* Начинается после появления текста */
+}
+
+/* Анимация плавного появления вверх */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация плавного увеличения */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Маленький текст в углу */
+.hero-credit {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5); /* Полупрозрачный */
+    font-style: italic;
+    letter-spacing: 0.5px;
+    pointer-events: none; /* Чтобы текст не мешал клику */
+}
+
+
+
+
+
+
+/* Контейнер для кнопки Download Resume */
+.resume-download-container {
+    position: absolute;
+    top: 220px; /* Меняй это значение, чтобы поднять/опустить кнопку */
+    left: 0%; /* Центрируем кнопку */
+     /* Выравниваем по центру */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Кнопка Download Resume */
+.resume-button {
+    background: rgba(255, 255, 255, 0.167); /* Чуть прозрачнее */
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 50px; /* Меняй размер кнопки */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.resume-button svg {
+    width: 26px;  /* Ширина значка */
+    height: 26px; /* Высота значка */
+}
+
+
+/* Анимация при наведении */
+.resume-button:hover {
+    background: #e6b800;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Опции выбора языка */
+.resume-options {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: absolute;
+    top: -9px; /* Регулируй, чтобы менять отступ от кнопки */
+    left: 135%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Кнопки выбора языка */
+.resume-options button {
+    background: none;
+    color: white;
+    border: none;
+    padding: 10px 24px; /* Размер кнопок выбора */
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* Анимация при наведении */
+.resume-options button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Размещение кнопки над аватаркой */
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+
+

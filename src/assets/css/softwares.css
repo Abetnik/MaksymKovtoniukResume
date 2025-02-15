@@ -1,0 +1,86 @@
+.softwares-section {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.softwares-title {
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Расстояние между линиями и текстом */
+    position: relative;
+    width: 100%; /* Убедимся, что контент центрируется */
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+/* Гибкий контейнер для центрирования логотипов */
+.softwares-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Элемент софта */
+.software-item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.software-item:hover {
+    transform: scale(1.2);
+}
+
+/* Логотип */
+.software-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Подпись появляется при наведении */
+.software-name {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 14px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.software-item:hover .software-name {
+    opacity: 1;
+}
+
+
+
+/* Создаем линии слева и справа */
+.softwares-title::before,
+.softwares-title::after {
+    content: "";
+    flex-grow: 0; /* Позволяет линиям адаптироваться */
+    height: 2px; /* Толщина линии */
+    background-color: #ffffff; /* Цвет линии */
+}
+
+/* Изменяем длину линий */
+.softwares-title::before {
+    width: 100px; /* Длина левой линии */
+}
+
+.softwares-title::after {
+    width: 100px; /* Длина правой линии */
+}

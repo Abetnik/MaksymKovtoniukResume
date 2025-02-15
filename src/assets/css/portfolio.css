@@ -1,0 +1,205 @@
+/* Убираем вложенный скролл, делаем плавный флоу */
+html, body {
+  scroll-behavior: smooth; /* Плавный скролл */
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background: #111; /* Основной фон */
+}
+
+/* Основной контейнер портфолио */
+.portfolio {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 220px; /* Отступ сверху перед заголовком */
+}
+
+/* Заголовок секции */
+.portfolio-title-main {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: 125px; /* Отступ от заголовка до видео */
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+ 
+}
+
+/* Каждая секция - полноэкранный кадр */
+.portfolio-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+  background: #111;
+  scroll-snap-align: start;
+  overflow: hidden; /* Убираем лишние элементы за границей экрана */
+}
+
+/* Контент */
+.portfolio-content {
+  position: absolute;
+  top: 25%;
+  z-index: 3; /* Выше градиента */
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Заголовки внутри секций */
+.portfolio-title {
+  font-size: 5.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.portfolio-description {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Видео и изображения */
+.portfolio-media {
+  width: 70%;
+  height: 100vh;
+  object-fit: cover;
+  position: center;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1; /* Под градиентом */
+}
+
+/* Затемнение при наведении */
+.portfolio-section:hover .portfolio-media {
+  opacity: 1;
+}
+
+/* ✅ ГРАДИЕНТ только на первой секции, мягкий переход */
+.first-section .gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Можно регулировать */
+  background: linear-gradient(180deg, #111 0%, rgba(17, 17, 17, 0.8) 30%, rgba(17, 17, 17, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+  z-index: 2; /* Поверх видео */
+  pointer-events: none;
+}
+
+
+/* 🔥 Градиент снизу для последней секции */
+.last-section .gradient-overlay-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Высоту можно регулировать */
+  background: linear-gradient(0deg, #111 0%, rgba(17, 17, 17, 0.8) 30%, rgba(17, 17, 17, 0.5) 60%, rgba(0, 0, 0, 0) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+/* ✅ Глобальные стили для градиентов */
+.custom-gradient {
+  position: absolute;
+  z-index: 9999; /* Градиент поверх всего */
+  pointer-events: none; /* Не мешает кликам */
+}
+
+/* ✅ Левый градиент (начало и конец регулируется вручную) */
+.gradient-left {
+  left: 50px; /* Установи вручную, где начинается */
+  top: 0;
+  width: 200px; /* Длина градиента */
+  height: 100%;
+  background: linear-gradient(to right, #111 0%, rgba(17, 17, 17, 0) 100%);
+}
+
+/* ✅ Правый градиент (начало и конец регулируется вручную) */
+.gradient-right {
+  right: 5000px; /* Установи вручную, где заканчивается */
+  top: 0;
+  width: 2000px; /* Длина градиента */
+  height: 100%;
+  background: linear-gradient(to left, #111 0%, rgba(17, 17, 17, 0) 100%);
+}
+
+
+
+/* Контейнер для видео и изображений */
+.portfolio-media-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Видео и изображения */
+.portfolio-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+/* Левый градиент (направлен вправо) */
+.gradient-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(to right, #111 0%, rgba(17, 17, 17, 0.6) 50%, rgba(17, 17, 17, 0) 100%);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Правый градиент (направлен влево) */
+.gradient-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(to left, #111 0%, rgba(17, 17, 17, 0.6) 50%, rgba(17, 17, 17, 0) 100%);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+
+/* ✅ Градиент сверху вниз для первого видео */
+.first-section .gradient-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 700px; /* Регулируем высоту градиента */
+  background: linear-gradient(to bottom, #111 0%, rgba(17, 17, 17, 0) 100%);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* ✅ Градиент снизу вверх для последнего видео */
+.last-section .gradient-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 800px; /* Регулируем высоту градиента */
+  background: linear-gradient(to top, #111 0%, rgba(17, 17, 17, 0) 100%);
+  z-index: 9999;
+  pointer-events: none;
+}

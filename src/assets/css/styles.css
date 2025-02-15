@@ -1,0 +1,113 @@
+@import url("./hero.css");
+@import url("./about.css");
+@import url("./experience.css");
+@import url("./reset.css");
+
+/* Начальное состояние — скрыто */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  /* Когда элемент виден — плавное появление */
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Общий цвет фона для всего сайта */
+body {
+    background-color: #111; /* Цвет заднего фона */
+    color: white; /* Цвет текста по умолчанию */
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif; /* Установим шрифт */
+}
+
+
+.space-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background: radial-gradient(circle at center, rgba(10, 10, 10, 0.8), rgba(0, 0, 0, 1));
+}
+
+
+
+/* Кнопка вверх */
+.scroll-to-top {
+  position: fixed;
+  bottom: 200px;
+  right: 200px;
+  width: 100px;
+  height: 100px;
+  background: rgba(58, 58, 58, 0.9);
+  color: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  z-index: 10000;
+  pointer-events: none; /* Кнопка не кликабельна, когда скрыта */
+}
+
+/* Анимация появления */
+.scroll-to-top.show {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: auto; /* Делаем кнопку кликабельной */
+}
+
+/* Анимация исчезновения */
+.scroll-to-top.hide {
+  opacity: 0;
+  transform: scale(0.8) translateY(20px); /* Кнопка уменьшается и уходит вниз */
+  pointer-events: none; /* Не даем кликать во время исчезновения */
+}
+
+/* Анимация при наведении */
+.scroll-to-top:hover {
+  background: #e6b800;
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(255, 204, 0, 0.5);
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+/* Эффект клика */
+.scroll-to-top:active {
+  transform: scale(0.9) translateY(1px);
+  box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.7);
+}
+
+
+html, body {
+  overflow-y: auto !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

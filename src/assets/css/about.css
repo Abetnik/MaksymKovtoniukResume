@@ -1,0 +1,59 @@
+/* Общие стили секции */
+.about-section {
+    background: #11111100;
+    color: white;
+    text-align: center;
+    padding: 120px 50px;
+}
+
+/* Контейнер контента */
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 21px;
+    line-height: 1.6;
+}
+
+/* Заголовок */
+.about-content h2 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Расстояние между линиями и текстом */
+    width: 100%;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+/* Текст с выделением */
+.about-content p {
+    margin-bottom: 20px;
+}
+
+/* Выделенные слова */
+.about-content strong {
+    color: #ffcc00d1;
+    font-weight: bold;
+}
+
+
+/* Линии слева и справа */
+.about-content h2::before,
+.about-content h2::after {
+    content: "";
+    flex-grow: 0;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+/* Длина линий */
+.about-content h2::before {
+    width: 100px; /* Длина левой линии */
+}
+
+.about-content h2::after {
+    width: 100px; /* Длина правой линии */
+}
