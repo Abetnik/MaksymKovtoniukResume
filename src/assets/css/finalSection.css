@@ -1,155 +1,215 @@
 .final-section {
-    text-align: center;
-    padding: 100px 20px;
-    background: #111;
-    color: white;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
-    transform: translateY(30px);
-    
-  }
-  
-  .final-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .final-slogan {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 90px;
-    margin-top: 100px;
-  }
-  
-  /* Анимация формы */
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
-  }
-  
-  .contact-form.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Поля ввода */
-  .input-group {
-    margin-bottom: 20px;
-    position: relative;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    outline: none;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Анимация при наведении */
-  .contact-form input:hover,
-  .contact-form textarea:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: scale(1.03);
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-  }
-  
-  /* Анимация при фокусе */
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-    background: rgba(255, 255, 255, 0.4);
-    transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
-  }
-  
-  /* Кнопка */
-  .send-btn {
-    padding: 15px;
-    background-color: #ffcc00;
-    color: #111;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease-in-out;
-    font-weight: bold;
-  }
-  
-  /* Анимация кнопки при наведении */
-  .send-btn:hover {
-    background-color: #ffcc00;
-    transform: scale(1.1);
-    box-shadow: 0px 5px 15px rgba(255, 102, 0, 0.5);
-  }
-  
-  /* Анимация кнопки при нажатии */
-  .send-btn:active {
-    transform: scale(0.95);
-    box-shadow: 0px 3px 10px rgba(255, 102, 0, 0.4);
-  }
-  
-  /* Анимация ссылок */
-  .social-links {
-    margin-top: 40px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
-  }
-  
-  .social-links.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  text-align: center;
+  padding: 100px 20px;
+  background: #111;
+  color: white;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  transform: translateY(30px);
+}
 
-  /* Контейнер для соцсетей */
+.final-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.final-slogan {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 90px;
+  margin-top: 100px;
+}
+
+/* Анимация формы */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.contact-form.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Поля ввода */
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Анимация при наведении */
+.contact-form input:hover,
+.contact-form textarea:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.03);
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Анимация при фокусе */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Кнопка */
+.send-btn {
+  padding: 15px;
+  background-color: #ffcc00;
+  color: #111;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease-in-out;
+  font-weight: bold;
+}
+
+/* Анимация кнопки при наведении */
+.send-btn:hover {
+  background-color: #ffcc00;
+  transform: scale(1.1);
+  box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.5);
+}
+
+/* Анимация кнопки при нажатии */
+.send-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0px 3px 10px rgba(255, 204, 0, 0.4);
+}
+
+/* Анимация ссылок */
 .social-links {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
-  }
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.social-links.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Контейнер для соцсетей */
+.social-links {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.social-links.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Стили для ссылок */
+.social-links a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Анимация при наведении */
+.social-links a:hover {
+  background: #ffcc00; /* Теперь цвет как у кнопки Send Message */
+  color: #111; /* Темный цвет текста */
+  transform: scale(1.1);
+  box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.5);
+}
+
+/* Анимация при нажатии */
+.social-links a:active {
+  transform: scale(0.95);
+  box-shadow: 0px 3px 10px rgba(255, 204, 0, 0.4);
+}
+
+
+
+  /*//////////////////////////////ADAPTATION///////////////////////////////*/
   
-  .social-links.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Стили для ссылок */
-  .social-links a {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-  }
-  
-  /* Анимация при наведении */
-  .social-links a:hover {
-    background: #ff6600;
-    color: white;
-    transform: scale(1.1);
-    box-shadow: 0px 4px 15px rgba(255, 102, 0, 0.5);
-  }
-  
+
+  @media (max-width: 768px) {
+    /* 🔹 Общий контейнер секции */
+    .final-section {
+        padding: 60px 15px; /* Уменьшаем отступы */
+    }
+
+    /* 🔹 Заголовок секции */
+    .final-slogan {
+        font-size: 1.5rem; /* Уменьшаем шрифт */
+        font-weight: bold;
+        margin-bottom: 40px;
+        margin-top: 50px;
+        text-align: center;
+        line-height: 1.3; /* Уменьшаем межстрочный интервал */
+    }
+
+    /* 🔹 Контейнер формы */
+    .contact-form {
+        max-width: 70%; /* Растягиваем форму на всю ширину */
+        padding: 20px; /* Уменьшаем внутренние отступы */
+        border-radius: 10px;
+    }
+
+    /* 🔹 Поля ввода */
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem; /* Уменьшаем текст в полях */
+        padding: 12px;
+    }
+
+    /* 🔹 Кнопка отправки */
+    .send-btn {
+        font-size: 1rem; /* Делаем кнопку компактнее */
+        padding: 12px;
+    }
+
+    /* 🔹 Контейнер для соцсетей */
+    .social-links {
+        margin-top: 30px;
+        flex-wrap: wrap; /* Позволяем переносить элементы */
+        gap: 15px; /* Уменьшаем расстояние между элементами */
+    }
+
+    /* 🔹 Социальные ссылки */
+    .social-links a {
+        font-size: 1rem; /* Делаем текст меньше */
+        padding: 8px 15px;
+    }
+}
+
   

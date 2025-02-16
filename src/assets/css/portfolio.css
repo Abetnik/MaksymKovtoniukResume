@@ -56,12 +56,15 @@ html, body {
   font-size: 5.5rem;
   font-weight: bold;
   margin-bottom: 10px;
+  
 }
 
 .portfolio-description {
   font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto;
+  position: relative;
+  z-index: 9999;
 }
 
 /* Видео и изображения */
@@ -188,7 +191,7 @@ html, body {
   width: 100%;
   height: 700px; /* Регулируем высоту градиента */
   background: linear-gradient(to bottom, #111 0%, rgba(17, 17, 17, 0) 100%);
-  z-index: 9999;
+  z-index: 3;
   pointer-events: none;
 }
 
@@ -203,3 +206,154 @@ html, body {
   z-index: 9999;
   pointer-events: none;
 }
+
+
+/*///////////////////////////////////ADAPTATION//////////////////////////////////////////*/
+
+
+@media (max-width: 768px) {
+  /* 🔹 Уменьшаем отступы в секции */
+  .portfolio-section {
+      padding: 40px 15px;
+      text-align: center;
+      height: auto; /* Убираем фиксированную высоту */
+  }
+
+  /* 🔹 Заголовок секции */
+  .portfolio-title {
+      font-size: 22px;
+      margin-bottom: 15px;
+  }
+
+  /* 🔹 Описание портфолио */
+  .portfolio-description {
+      font-size: 14px;
+      max-width: 90%;
+      margin: 0 auto;
+  }
+
+  /* 🔹 Контейнер с видео и изображениями */
+  .portfolio-media-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      height: auto; /* Делаем высоту адаптивной */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+  }
+
+  /* 🔹 Видео и изображения */
+  .portfolio-media {
+      width: 100%;
+      height: auto; /* Адаптивная высота */
+      object-fit: cover;
+      max-height: 300px; /* Ограничиваем высоту, чтобы не было огромного видео */
+      border-radius: 10px;
+  }
+
+  /* 🔹 Градиент сверху */
+  .gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 150px; /* Уменьшаем высоту градиента */
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+      pointer-events: none;
+  }
+
+  /* 🔹 Градиент снизу */
+  .gradient-overlay-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 150px; /* Уменьшаем высоту градиента */
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+      pointer-events: none;
+  }
+
+  /* 🔹 Сетка проектов (уменьшаем количество колонок) */
+  .portfolio-grid {
+      display: grid;
+      grid-template-columns: 1fr; /* Теперь проекты идут в одну колонку */
+      gap: 15px;
+      justify-items: center;
+      width: 100%;
+  }
+
+  /* 🔹 Карточки портфолио */
+  .portfolio-item {
+      width: 100%;
+      max-width: 90%;
+      border-radius: 10px;
+      overflow: hidden;
+  }
+
+  /* 🔹 Уменьшаем текст внутри карточек */
+  .portfolio-item-title {
+      font-size: 16px;
+      margin-top: 8px;
+  }
+
+  .portfolio-item-description {
+      font-size: 12px;
+      margin-top: 4px;
+  }
+
+
+  /* 🔹 Заголовок секции */
+  .portfolio-title {
+    font-size: 24px; /* Уменьшаем размер */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Переносим длинные слова */
+    max-width: 90%; /* Ограничиваем ширину */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 🔹 Нижний градиент для последнего видео */
+.last-section .gradient-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* Уменьшаем высоту градиента */
+  background: linear-gradient(to top, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.5) 50%, rgba(17, 17, 17, 0) 100%);
+  z-index: 1; /* Оставляем ниже текста */
+  pointer-events: none;
+}
+
+
+.first-section .gradient-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* Уменьшаем высоту градиента */
+  background: linear-gradient(to bottom, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.5) 50%, rgba(17, 17, 17, 0) 100%);
+  z-index: 1; /* Градиент остается ниже текста */
+  pointer-events: none;
+}
+
+
+/* 🔹 Заголовок секции Portfolio */
+.portfolio-title-main {
+  font-size: 1.4rem; /* Уменьшаем размер шрифта */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Делаем расстояние между буквами меньше */
+  color: white;
+  text-align: center;
+  max-width: 90%; /* Ограничиваем ширину */
+  margin: 0 auto 30px auto; /* Уменьшаем отступ снизу */
+  text-shadow: 0px 3px 8px rgba(0, 0, 0, 0.6); /* Делаем тень мягче */
+}
+
+
+}
+

@@ -62,10 +62,10 @@ const FinalSection = forwardRef((props, ref) => {
 
         {/* Social Links */}
 <div className={`social-links ${isFormVisible ? "fade-in" : ""}`}>
-  <a href="https://www.linkedin.com/in/ВАШ_ЛОГИН/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-  <a href="https://t.me/ВАШ_ЮЗЕРНЕЙМ" target="_blank" rel="noopener noreferrer">Telegram</a>
-  <a href="https://www.instagram.com/ВАШ_ЛОГИН/" target="_blank" rel="noopener noreferrer">Instagram</a>
-  <a href="https://www.artstation.com/ВАШ_ЛОГИН" target="_blank" rel="noopener noreferrer">ArtStation</a>
+  <a href="https://www.linkedin.com/in/maksym-kovtoniuk-9a427934b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  <a href="https://t.me/Max3DdesignKov" target="_blank" rel="noopener noreferrer">Telegram</a>
+  <a href="https://www.instagram.com/makovdesign?igsh=NTc4MTIwNjQ2YQ==/" target="_blank" rel="noopener noreferrer">Instagram</a>
+  <a href="https://www.artstation.com/makov" target="_blank" rel="noopener noreferrer">ArtStation</a>
 </div>
 
       </div>

@@ -108,3 +108,96 @@
 }
 
 
+@media (max-width: 768px) {
+    /* 🔹 Делаем секцию видимой и корректируем отступы */
+    .skills-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 10px;
+        width: 100%;
+        max-width: 100%;
+        opacity: 1 !important; /* Убедимся, что секция не скрыта */
+        visibility: visible !important;
+    }
+
+    /* 🔹 Заголовок секции */
+    .skills-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    /* 🔹 Контейнер с колонками навыков (2 в ряд) */
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(140px, 1fr)); /* Гибкие две колонки */
+        gap: 15px;
+        width: 100%;
+        max-width: 90%;
+        justify-content: center;
+    }
+
+    /* 🔹 Каждая категория навыков */
+    .skill-category {
+        width: 100%;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 12px;
+        border-radius: 8px;
+        opacity: 1 !important; /* Делаем видимыми */
+        visibility: visible !important;
+    }
+
+    /* 🔹 Заголовки категорий */
+    .skill-category h3 {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    /* 🔹 Список навыков адаптируем */
+    .skill-list {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    /* 🔹 Оформление каждого навыка */
+    .skill-item {
+        font-size: 14px;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s, background 0.3s;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 🔹 Эффект при наведении */
+    .skill-item:hover {
+        background: rgba(255, 204, 0, 0.5);
+        transform: scale(1.05);
+    }
+
+    /* 🔹 Убираем скрытие элементов */
+    .skills-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .skills-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+
+
+
+
