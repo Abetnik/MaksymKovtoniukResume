@@ -10,8 +10,8 @@ const HeroSection = forwardRef(({ contactFormRef }, ref) => {  // Добавил
   // Функция скачивания резюме
   const handleDownload = (lang) => {
     const resumeLinks = {
-      en: "https://drive.google.com/uc?export=download&id=13-3g6eRrwBbRVSpU9ShlwZjXHsV9atOP",
-      pl: "https://drive.google.com/uc?export=download&id=13-3g6eRrwBbRVSpU9ShlwZjXHsV9atOP",
+      en: "https://drive.google.com/uc?export=download&id=1D6cgMEV_qzRSqP_VI7ofvxM8Rcg24tHR",
+      pl: "https://drive.google.com/uc?export=download&id=1X07_gelO-XBgaam4qiAHQpS3IcvftyxT",
     };
     window.open(resumeLinks[lang], "_blank");
     setShowOptions(false);
