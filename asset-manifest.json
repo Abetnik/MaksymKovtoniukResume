@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/MaksymKovtoniukResume/static/css/main.be493631.css",
+    "main.css": "/MaksymKovtoniukResume/static/css/main.ddafe8c4.css",
     "main.js": "/MaksymKovtoniukResume/static/js/main.4596b6ff.js",
     "static/js/453.655fb567.chunk.js": "/MaksymKovtoniukResume/static/js/453.655fb567.chunk.js",
     "static/media/Pub.mp4": "/MaksymKovtoniukResume/static/media/Pub.32320221cd1e57126172.mp4",
@@ -27,12 +27,12 @@
     "static/media/blender.png": "/MaksymKovtoniukResume/static/media/blender.59d4e3bb4de1829ca752.png",
     "static/media/substance.png": "/MaksymKovtoniukResume/static/media/substance.b5ba4d5bdad24860d12c.png",
     "index.html": "/MaksymKovtoniukResume/index.html",
-    "main.be493631.css.map": "/MaksymKovtoniukResume/static/css/main.be493631.css.map",
+    "main.ddafe8c4.css.map": "/MaksymKovtoniukResume/static/css/main.ddafe8c4.css.map",
     "main.4596b6ff.js.map": "/MaksymKovtoniukResume/static/js/main.4596b6ff.js.map",
     "453.655fb567.chunk.js.map": "/MaksymKovtoniukResume/static/js/453.655fb567.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.be493631.css",
+    "static/css/main.ddafe8c4.css",
     "static/js/main.4596b6ff.js"
   ]
 }
